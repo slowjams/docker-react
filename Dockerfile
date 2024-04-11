@@ -5,6 +5,7 @@ WORKDIR /home/node/app
 COPY --chown=node:node ./package.json ./
 RUN npm install
 COPY --chown=node:node ./ ./
+## note that following instructin is "build", not "start"
 RUN npm run build
 
 From nginx
